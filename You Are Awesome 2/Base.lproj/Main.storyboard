@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9L-Kh-rhG">
+                                <rect key="frame" x="16" y="20" width="343" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="Iuc-Y1-ucp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.58152951653337015" blue="0.43355491488208664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-4L-rUz">
+                                <rect key="frame" x="255" y="184" width="104" height="30"/>
+                                <state key="normal" title="Show Message"/>
+                                <connections>
+                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Wl-Dm-e7M"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wi7-V7-RG9">
+                                <rect key="frame" x="115" y="184" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="3MR-Lv-AT4"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROa-dt-leH">
+                                <rect key="frame" x="16" y="189" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wYm-vE-IlV">
+                                <rect key="frame" x="16" y="234" width="343" height="387"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K9L-Kh-rhG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7il-rr-Udh"/>
+                            <constraint firstItem="Wi7-V7-RG9" firstAttribute="leading" secondItem="ROa-dt-leH" secondAttribute="trailing" constant="8" symbolic="YES" id="BqS-a2-yQS"/>
+                            <constraint firstItem="K9L-Kh-rhG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="D8F-pc-bA4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wYm-vE-IlV" secondAttribute="bottom" constant="46" id="EJe-Ab-nrm"/>
+                            <constraint firstItem="wYm-vE-IlV" firstAttribute="top" secondItem="Wi7-V7-RG9" secondAttribute="bottom" constant="19" id="L13-Bw-OFT"/>
+                            <constraint firstItem="Wi7-V7-RG9" firstAttribute="top" secondItem="K9L-Kh-rhG" secondAttribute="bottom" constant="8" symbolic="YES" id="WG7-at-0Ct"/>
+                            <constraint firstItem="K9L-Kh-rhG" firstAttribute="leading" secondItem="ROa-dt-leH" secondAttribute="leading" id="XE7-od-7UD"/>
+                            <constraint firstItem="ROa-dt-leH" firstAttribute="centerY" secondItem="Wi7-V7-RG9" secondAttribute="centerY" id="cuN-3t-OV2"/>
+                            <constraint firstItem="K9L-Kh-rhG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eNw-mA-ukL"/>
+                            <constraint firstItem="K9L-Kh-rhG" firstAttribute="trailing" secondItem="esZ-4L-rUz" secondAttribute="trailing" id="sZb-hI-78c"/>
+                            <constraint firstItem="esZ-4L-rUz" firstAttribute="trailing" secondItem="wYm-vE-IlV" secondAttribute="trailing" id="w8V-H5-E5K"/>
+                            <constraint firstItem="Wi7-V7-RG9" firstAttribute="top" secondItem="esZ-4L-rUz" secondAttribute="top" id="wXg-oP-NDv"/>
+                            <constraint firstItem="ROa-dt-leH" firstAttribute="leading" secondItem="wYm-vE-IlV" secondAttribute="leading" id="x7m-l5-dEM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="awesomeImage" destination="wYm-vE-IlV" id="hlL-GF-bwa"/>
+                        <outlet property="messageLabel" destination="K9L-Kh-rhG" id="z9x-Zz-ACL"/>
+                        <outlet property="soundSwitch" destination="Wi7-V7-RG9" id="qWH-YC-7al"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
