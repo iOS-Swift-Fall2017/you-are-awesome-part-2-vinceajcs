@@ -12,12 +12,9 @@ import AVFoundation
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    
     @IBOutlet weak var messageLabel: UILabel!
-    
     @IBOutlet weak var awesomeImage: UIImageView!
     @IBOutlet weak var soundSwitch: UISwitch!
-    
     
     var awesomePlayer = AVAudioPlayer()
     var index = -1
@@ -63,7 +60,6 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Actions
-    
     @IBAction func soundSwitchPressed(_ sender: UISwitch) {
         if !soundSwitch.isOn && soundNumber != -1 {
             //Stop playing
@@ -102,10 +98,6 @@ class ViewController: UIViewController {
             playSound(soundName: soundName, audioPlayer: &awesomePlayer)
             
         }
-        
-        
-        
-        
         
         
         
